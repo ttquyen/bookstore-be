@@ -29,7 +29,6 @@ router.get("/", (req, res, next) => {
       if (!allowedFilter.includes(key)) {
         const exception = new Error(`Query ${key} is not allowed`);
         exception.statusCode = 401;
-        console.error(error);
 
         throw exception;
       }
